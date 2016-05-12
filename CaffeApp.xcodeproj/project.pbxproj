@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3567585D1B603A3F00FD9395 /* Knn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3567585C1B603A3F00FD9395 /* Knn.mm */; };
-		35B0EEFC1B5DA5230072C275 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B0EEFB1B5DA5230072C275 /* opencv2.framework */; };
-		35B0EEFE1B5DA65E0072C275 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B0EEFD1B5DA65E0072C275 /* opencv2.framework */; };
+		6225FC6AD71A0F4C4E803BF5 /* Pods_CaffeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42AAB11939E33B27674884F /* Pods_CaffeApp.framework */; };
 		8824C7A11B505B940016CC3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824C7A01B505B940016CC3D /* main.m */; };
 		8824C7A41B505B940016CC3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824C7A31B505B940016CC3D /* AppDelegate.m */; };
 		8824C7AA1B505B940016CC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8824C7A81B505B940016CC3D /* Main.storyboard */; };
@@ -153,13 +152,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0020294B20A391F79F495916 /* Pods-CaffeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaffeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaffeApp/Pods-CaffeApp.release.xcconfig"; sourceTree = "<group>"; };
 		356758581B5ED00A00FD9395 /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		356758591B60393E00FD9395 /* Difference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Difference.h; sourceTree = "<group>"; };
 		3567585B1B6039EB00FD9395 /* Knn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Knn.h; sourceTree = "<group>"; };
 		3567585C1B603A3F00FD9395 /* Knn.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Knn.mm; sourceTree = "<group>"; };
 		3567585E1B60644B00FD9395 /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
-		35B0EEFB1B5DA5230072C275 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		35B0EEFD1B5DA65E0072C275 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../opencv2.framework; sourceTree = "<group>"; };
+		392E9A3969334D2F2EB69197 /* Pods-CaffeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaffeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaffeApp/Pods-CaffeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8824C79B1B505B940016CC3D /* CaffeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8824C79F1B505B940016CC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8824C7A01B505B940016CC3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -338,6 +337,7 @@
 		8870DA4D1B5927600053CB1B /* image_0002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_0002.jpg; sourceTree = "<group>"; };
 		888C36AB1B508D300012410E /* caffe.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = caffe.proto; sourceTree = "<group>"; };
 		88BE9EE11B5763C70076137A /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = SOURCE_ROOT; };
+		A42AAB11939E33B27674884F /* Pods_CaffeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaffeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,12 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8870DA491B5920FC0053CB1B /* libleveldb.a in Frameworks */,
-				35B0EEFC1B5DA5230072C275 /* opencv2.framework in Frameworks */,
 				885E91BA1B507693003B736E /* libglog.a in Frameworks */,
 				885E91B41B50766D003B736E /* AudioToolbox.framework in Frameworks */,
 				885E91B21B507664003B736E /* Accelerate.framework in Frameworks */,
 				885E91BC1B507693003B736E /* libprotobuf.a in Frameworks */,
 				885E91BD1B507693003B736E /* libprotoc.a in Frameworks */,
+				6225FC6AD71A0F4C4E803BF5 /* Pods_CaffeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +359,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35B0EEFE1B5DA65E0072C275 /* opencv2.framework in Frameworks */,
 				88BE9ED41B5749060076137A /* AudioToolbox.framework in Frameworks */,
 				8870DA4A1B5921060053CB1B /* libleveldb.a in Frameworks */,
 				88BE9ED51B5749090076137A /* Accelerate.framework in Frameworks */,
@@ -372,13 +371,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38809BBDDB0B1EDD58E1EBAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				392E9A3969334D2F2EB69197 /* Pods-CaffeApp.debug.xcconfig */,
+				0020294B20A391F79F495916 /* Pods-CaffeApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8824C7921B505B940016CC3D = {
 			isa = PBXGroup;
 			children = (
-				35B0EEFD1B5DA65E0072C275 /* opencv2.framework */,
 				8824C79D1B505B940016CC3D /* CaffeApp */,
 				8824C7B71B505B940016CC3D /* CaffeAppTests */,
 				8824C79C1B505B940016CC3D /* Products */,
+				38809BBDDB0B1EDD58E1EBAA /* Pods */,
+				D381FA27A09680006AFE8779 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -415,7 +424,6 @@
 				885E91BE1B507D71003B736E /* include */,
 				885E91B51B507693003B736E /* lib */,
 				8824C79E1B505B940016CC3D /* Supporting Files */,
-				35B0EEFB1B5DA5230072C275 /* opencv2.framework */,
 				885E91B31B50766D003B736E /* AudioToolbox.framework */,
 				885E91B11B507664003B736E /* Accelerate.framework */,
 			);
@@ -711,6 +719,14 @@
 			path = example;
 			sourceTree = SOURCE_ROOT;
 		};
+		D381FA27A09680006AFE8779 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A42AAB11939E33B27674884F /* Pods_CaffeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -718,10 +734,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8824C7BE1B505B940016CC3D /* Build configuration list for PBXNativeTarget "CaffeApp" */;
 			buildPhases = (
+				E1FC1260F57B5AFF5CB20EE1 /* 📦 Check Pods Manifest.lock */,
 				8824C7971B505B940016CC3D /* Sources */,
 				8824C7981B505B940016CC3D /* Frameworks */,
 				8824C7991B505B940016CC3D /* Resources */,
 				888C36AE1B508FB80012410E /* CopyFiles */,
+				C2D73AD36C0638591A47C456 /* 📦 Embed Pods Frameworks */,
+				936031318A414699403C3F9B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 				888C36AD1B508D590012410E /* PBXBuildRule */,
@@ -757,12 +776,12 @@
 		8824C7931B505B940016CC3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Takuya Matsuyama";
 				TargetAttributes = {
 					8824C79A1B505B940016CC3D = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = WCM2L8RG39;
+						DevelopmentTeam = KL43C67G5Z;
 					};
 					8824C7B31B505B940016CC3D = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -815,6 +834,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		936031318A414699403C3F9B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaffeApp/Pods-CaffeApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D73AD36C0638591A47C456 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CaffeApp/Pods-CaffeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1FC1260F57B5AFF5CB20EE1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8824C7971B505B940016CC3D /* Sources */ = {
@@ -963,6 +1030,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1024,12 +1092,14 @@
 		};
 		8824C7BF1B505B940016CC3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 392E9A3969334D2F2EB69197 /* Pods-CaffeApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CaffeApp",
@@ -1050,26 +1120,28 @@
 					"$(PROJECT_DIR)/caffe/lib",
 					"$(PROJECT_DIR)/caffe/ios/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.pkpk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
 			};
 			name = Debug;
 		};
 		8824C7C01B505B940016CC3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0020294B20A391F79F495916 /* Pods-CaffeApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CaffeApp",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = "CPU_ONLY=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1081,9 +1153,10 @@
 					"$(PROJECT_DIR)/caffe/lib",
 					"$(PROJECT_DIR)/caffe/ios/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.pkpk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
 			};
 			name = Release;
@@ -1112,6 +1185,7 @@
 					"$(PROJECT_DIR)/caffe/lib",
 					"$(PROJECT_DIR)/caffe/ios/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.pkpk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaffeApp.app/CaffeApp";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/include";
@@ -1138,6 +1212,7 @@
 					"$(PROJECT_DIR)/caffe/lib",
 					"$(PROJECT_DIR)/caffe/ios/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.pkpk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaffeApp.app/CaffeApp";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/include";

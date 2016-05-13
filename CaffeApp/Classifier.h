@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "caffe/caffe.hpp"
 #import <opencv2/opencv.hpp>
-#import <opencv2/highgui/ios.h>
+//#import <opencv2/imgcodecs/ios.h>
 #include <iosfwd>
 #include <memory>
 #include <string>
@@ -30,7 +30,7 @@ public:
              const string& mean_file,
              const string& label_file);
   
-  std::vector<float> Classify(const cv::Mat& img);
+  std::vector<Prediction> Classify(const cv::Mat& img, int N = 5);
   
 private:
   void SetMean(const string& mean_file);

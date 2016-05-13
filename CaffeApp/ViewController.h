@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIImageView* imageView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;
 - (IBAction)classify:(id)sender;

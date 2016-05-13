@@ -43,11 +43,10 @@ Classifier::Classifier(const string& model_file,
   string line;
   while (std::getline(labels, line))
     labels_.push_back(string(line));
-  /*
+  
   Blob<float>* output_layer = net_->output_blobs()[0];
   CHECK_EQ(labels_.size(), output_layer->channels())
   << "Number of labels is different from the output layer dimension.";
-   */
 }
 
 static bool PairCompare(const std::pair<float, int>& lhs,
@@ -56,7 +55,6 @@ static bool PairCompare(const std::pair<float, int>& lhs,
 }
 
 /* Return the indices of the top N values of vector v. */
-/*
 static std::vector<int> Argmax(const std::vector<float>& v, int N) {
   std::vector<std::pair<float, int> > pairs;
   for (size_t i = 0; i < v.size(); ++i)
@@ -68,9 +66,8 @@ static std::vector<int> Argmax(const std::vector<float>& v, int N) {
     result.push_back(pairs[i].second);
   return result;
 }
-*/
+
 /* Return the top N predictions. */
-/*
 std::vector<Prediction> Classifier::Classify(const cv::Mat& img, int N) {
   std::vector<float> output = Predict(img);
   
@@ -82,11 +79,6 @@ std::vector<Prediction> Classifier::Classify(const cv::Mat& img, int N) {
   }
   
   return predictions;
-}*/
-
-std::vector<float> Classifier::Classify(const cv::Mat& img) {
-    std::vector<float> output = Predict(img);
-    return output;
 }
 
 /* Load the mean file in binaryproto format. */

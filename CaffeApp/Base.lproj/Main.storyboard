@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,61 +16,57 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-gM-GL2">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="466"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKy-9E-paS">
-                                <rect key="frame" x="17" y="512" width="88" height="30"/>
-                                <state key="normal" title="Select photo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wct-Mk-hjV">
+                                <rect key="frame" x="20" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="selectPhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5z0-Xg-MaB"/>
+                                    <action selector="predict1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oz2-3Q-go8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ7-bi-fCJ">
-                                <rect key="frame" x="16" y="474" width="89" height="30"/>
-                                <state key="normal" title="Take a photo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-xD-7Z1">
+                                <rect key="frame" x="74" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="takePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QgP-48-06o"/>
+                                    <action selector="predict2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kZW-DS-GbW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recognized Object" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngB-n9-M36">
-                                <rect key="frame" x="287" y="516" width="147" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1B-MA-lYs">
+                                <rect key="frame" x="16" y="364" width="288" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="K2T-fV-7wZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-be-C46">
-                                <rect key="frame" x="17" y="550" width="58" height="30"/>
-                                <state key="normal" title="Classify!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="classify:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cal-Vp-gCT"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-gM-GL2">
+                                <rect key="frame" x="16" y="60" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4AP-gM-GL2" secondAttribute="height" multiplier="1:1" id="ES3-cW-dpX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="4AP-gM-GL2" secondAttribute="trailing" constant="-16" id="5bW-ed-dVL"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4AP-gM-GL2" secondAttribute="bottom" id="5w3-1B-d3m"/>
-                            <constraint firstItem="4AP-gM-GL2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9MD-iT-h9H"/>
-                            <constraint firstItem="4AP-gM-GL2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Hrc-UW-OHx"/>
+                            <constraint firstItem="v1B-MA-lYs" firstAttribute="top" secondItem="4AP-gM-GL2" secondAttribute="bottom" constant="16" id="2OU-MJ-bec"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4AP-gM-GL2" secondAttribute="trailing" id="5bW-ed-dVL"/>
+                            <constraint firstItem="4AP-gM-GL2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="9MD-iT-h9H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v1B-MA-lYs" secondAttribute="trailing" id="Fng-zm-hVT"/>
+                            <constraint firstItem="4AP-gM-GL2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="60" id="Hrc-UW-OHx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="v1B-MA-lYs" secondAttribute="leading" id="TkK-Nx-9GE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="4AP-gM-GL2" id="SJu-Cf-Ups"/>
-                        <outlet property="recogObject" destination="ngB-n9-M36" id="Wm8-Gc-76T"/>
+                        <outlet property="imageView" destination="4AP-gM-GL2" id="015-vc-3rD"/>
+                        <outlet property="label" destination="v1B-MA-lYs" id="PLo-Pv-mbI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="268"/>
         </scene>
     </scenes>
 </document>

@@ -9,13 +9,59 @@
 #import "ViewController.h"
 #import "Classifier.h"
 #import "opencv2/highgui/ios.h"
+#import "Knn.h"
 
-@interface ViewController ()
 
-@end
+@interface ViewController (){
+    
+
+UIImage* classificationImage;
+int initialFlag;
+vector<DataModel> trainingDescVect;
+
+}@end
 
 @implementation ViewController
 
+- (IBAction)takePhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (IBAction)selectPhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imageView.image = chosenImage;
+    classificationImage = chosenImage;
+    
+ 
+    NSString* result = [self predictWithImage:chosenImage];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _label.text = result;
+    });
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

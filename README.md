@@ -78,6 +78,30 @@ for (std::vector<Prediction>::iterator it = result.begin(); it != result.end(); 
 }
 ```
 
+
+
+OPTIONAL - Not tested 
+To avoid the app blowing up on device.....
+
+in the bin folder I included upgrade_net_proto_binary + upgrade_net_proto_text
+to upgrade your caffemodel
+/upgrade_net_proto_binary /PATH/model/bvlc_reference_caffenet.caffemodel /PATH/model/upgraded.caffemodel
+
+
+
+Alternatively osx installation of caffe
+https://gist.github.com/kylemcdonald/0698c7749e483cd43a0e
+ 
+ make all  
+ After make test in $CAFFE_ROOT:
+ cp -a .build_release/lib/. /usr/local/lib/ 
+ // this solves this problem dyld: Library not loaded: libcaffe.so.1.0.0-rc3
+
+
+
+
+
+
 ## License and Citation
 
 ### This example

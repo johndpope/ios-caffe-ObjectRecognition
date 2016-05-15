@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		3567585D1B603A3F00FD9395 /* Knn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3567585C1B603A3F00FD9395 /* Knn.mm */; };
 		6225FC6AD71A0F4C4E803BF5 /* Pods_CaffeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42AAB11939E33B27674884F /* Pods_CaffeApp.framework */; };
+		8300C7301CE7F7E90042B980 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300C72F1CE7F7E90042B980 /* CameraVC.swift */; };
+		8300C7321CE7F8F40042B980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300C7311CE7F8F40042B980 /* AppDelegate.swift */; };
 		83985A831CE581BD0045D7A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83985A821CE581BD0045D7A9 /* AVFoundation.framework */; };
-		8824C7A11B505B940016CC3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824C7A01B505B940016CC3D /* main.m */; };
-		8824C7A41B505B940016CC3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824C7A31B505B940016CC3D /* AppDelegate.m */; };
 		8824C7AA1B505B940016CC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8824C7A81B505B940016CC3D /* Main.storyboard */; };
 		8824C7AC1B505B940016CC3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8824C7AB1B505B940016CC3D /* Images.xcassets */; };
 		8824C7AF1B505B940016CC3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8824C7AD1B505B940016CC3D /* LaunchScreen.xib */; };
@@ -160,12 +160,12 @@
 		3567585C1B603A3F00FD9395 /* Knn.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Knn.mm; sourceTree = "<group>"; };
 		3567585E1B60644B00FD9395 /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		392E9A3969334D2F2EB69197 /* Pods-CaffeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaffeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaffeApp/Pods-CaffeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8300C72E1CE7F7E80042B980 /* CaffeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CaffeApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		8300C72F1CE7F7E90042B980 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		8300C7311CE7F8F40042B980 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83985A821CE581BD0045D7A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8824C79B1B505B940016CC3D /* CaffeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8824C79F1B505B940016CC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8824C7A01B505B940016CC3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8824C7A21B505B940016CC3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8824C7A31B505B940016CC3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8824C7A51B505B940016CC3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8824C7A61B505B940016CC3D /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		8824C7A91B505B940016CC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -406,8 +406,9 @@
 		8824C79D1B505B940016CC3D /* CaffeApp */ = {
 			isa = PBXGroup;
 			children = (
-				8824C7A21B505B940016CC3D /* AppDelegate.h */,
-				8824C7A31B505B940016CC3D /* AppDelegate.m */,
+				8300C7311CE7F8F40042B980 /* AppDelegate.swift */,
+				8300C72F1CE7F7E90042B980 /* CameraVC.swift */,
+				885E90231B507632003B736E /* caffe */,
 				356758591B60393E00FD9395 /* Difference.h */,
 				356758581B5ED00A00FD9395 /* DataModel.h */,
 				3567585B1B6039EB00FD9395 /* Knn.h */,
@@ -423,12 +424,12 @@
 				8824C7AD1B505B940016CC3D /* LaunchScreen.xib */,
 				88BE9EE11B5763C70076137A /* model */,
 				88BE9EDA1B5761020076137A /* example */,
-				885E90231B507632003B736E /* caffe */,
 				885E91BE1B507D71003B736E /* include */,
 				885E91B51B507693003B736E /* lib */,
 				8824C79E1B505B940016CC3D /* Supporting Files */,
 				885E91B31B50766D003B736E /* AudioToolbox.framework */,
 				885E91B11B507664003B736E /* Accelerate.framework */,
+				8300C72E1CE7F7E80042B980 /* CaffeApp-Bridging-Header.h */,
 			);
 			path = CaffeApp;
 			sourceTree = "<group>";
@@ -437,7 +438,6 @@
 			isa = PBXGroup;
 			children = (
 				8824C79F1B505B940016CC3D /* Info.plist */,
-				8824C7A01B505B940016CC3D /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -904,6 +904,7 @@
 				3567585D1B603A3F00FD9395 /* Knn.mm in Sources */,
 				885E91091B507651003B736E /* cudnn_conv_layer.cpp in Sources */,
 				885E91151B507651003B736E /* data_layer.cpp in Sources */,
+				8300C7301CE7F7E90042B980 /* CameraVC.swift in Sources */,
 				885E919D1B507651003B736E /* cudnn.cpp in Sources */,
 				885E90F71B507651003B736E /* internal_thread.cpp in Sources */,
 				885E91311B507651003B736E /* loss_layer.cpp in Sources */,
@@ -923,13 +924,11 @@
 				885E91051B507651003B736E /* contrastive_loss_layer.cpp in Sources */,
 				885E91011B507651003B736E /* bnll_layer.cpp in Sources */,
 				885E91A01B507651003B736E /* db_lmdb.cpp in Sources */,
-				8824C7A41B505B940016CC3D /* AppDelegate.m in Sources */,
 				885E910B1B507651003B736E /* cudnn_pooling_layer.cpp in Sources */,
 				885E911D1B507651003B736E /* euclidean_loss_layer.cpp in Sources */,
 				885E913D1B507651003B736E /* prelu_layer.cpp in Sources */,
 				885E913F1B507651003B736E /* reduction_layer.cpp in Sources */,
 				885E91131B507651003B736E /* cudnn_tanh_layer.cpp in Sources */,
-				8824C7A11B505B940016CC3D /* main.m in Sources */,
 				885E91381B507651003B736E /* neuron_layer.cpp in Sources */,
 				885E91AA1B507651003B736E /* gflags.cc in Sources */,
 				885E91AB1B507651003B736E /* gflags_completions.cc in Sources */,
@@ -963,6 +962,7 @@
 				885E91A41B507651003B736E /* insert_splits.cpp in Sources */,
 				885E911B1B507651003B736E /* eltwise_layer.cpp in Sources */,
 				885E91AC1B507651003B736E /* gflags_reporting.cc in Sources */,
+				8300C7321CE7F8F40042B980 /* AppDelegate.swift in Sources */,
 				885E912D1B507651003B736E /* inner_product_layer.cpp in Sources */,
 				885E90F81B507651003B736E /* layer_factory.cpp in Sources */,
 				885E919F1B507651003B736E /* db_leveldb.cpp in Sources */,
@@ -1101,6 +1101,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1113,6 +1114,8 @@
 					"$(inherited)",
 					"CPU_ONLY=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1127,6 +1130,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "info.pkpk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CaffeApp/CaffeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
 			};
@@ -1139,6 +1144,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1146,6 +1152,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CaffeApp",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1160,6 +1168,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "info.pkpk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CaffeApp/CaffeApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
 			};

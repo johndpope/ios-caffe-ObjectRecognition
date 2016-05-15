@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVFoundation.h>
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIImageView* imageView;
@@ -15,6 +15,9 @@
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;
 - (IBAction)classify:(id)sender;
+- (NSString*)predictWithImage: (UIImage*)image;
+- (NSString*)predictWithBuffer: (CMSampleBufferRef)buffer;
+
 @property (weak, nonatomic) IBOutlet UILabel *recogObject;
 
 

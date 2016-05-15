@@ -97,10 +97,7 @@ vector<DataModel> trainingDescVect;
     });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 Classifier * classifier;
 
@@ -116,6 +113,62 @@ Classifier * classifier;
     string mean_file_str = std::string([mean_file UTF8String]);
     
     classifier = new Classifier(model_file_str, trained_file_str, mean_file_str, label_file_str);
+}
+
+- (NSString*)predictWithBuffer: (CMSampleBufferRef)buffer{
+    
+    CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(buffer);
+    
+    CVPixelBufferLockBaseAddress( pixelBuffer, 0 );
+    
+    
+    //Processing here
+    int bufferWidth = CVPixelBufferGetWidth(pixelBuffer);
+    int bufferHeight = CVPixelBufferGetHeight(pixelBuffer);
+    unsigned char *pixel = (unsigned char *)CVPixelBufferGetBaseAddress(pixelBuffer);
+    
+    // put buffer in open cv, no memory copied
+    cv::Mat src_img = cv::Mat(bufferHeight,bufferWidth,CV_8UC4,pixel);
+    
+    //End processing
+    CVPixelBufferUnlockBaseAddress( pixelBuffer, 0 );
+
+    cv::Mat bgra_img;
+    // needs to convert to BGRA because the image loaded from UIImage is in RGBA
+    cv::cvtColor(src_img, bgra_img, CV_RGBA2BGRA);
+    
+    std::vector<Prediction> result = classifier->Classify(bgra_img);
+    
+    NSString* ret = nil;
+    
+    for (std::vector<Prediction>::iterator it = result.begin(); it != result.end(); ++it) {
+        NSString* label = [NSString stringWithUTF8String:it->first.c_str()];
+        NSNumber* probability = [NSNumber numberWithFloat:it->second];
+        NSLog(@"label: %@, prob: %@", label, probability);
+        if (it == result.begin()) {
+            ret = label;
+        }
+    }
+    
+    return ret;
+}
+- (void) parseBuffer:(CMSampleBufferRef) sampleBuffer
+{
+    CVImageBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    
+    CVPixelBufferLockBaseAddress( pixelBuffer, 0 );
+    
+    
+    //Processing here
+    int bufferWidth = CVPixelBufferGetWidth(pixelBuffer);
+    int bufferHeight = CVPixelBufferGetHeight(pixelBuffer);
+    unsigned char *pixel = (unsigned char *)CVPixelBufferGetBaseAddress(pixelBuffer);
+    
+    // put buffer in open cv, no memory copied
+    cv::Mat mat = cv::Mat(bufferHeight,bufferWidth,CV_8UC4,pixel);
+    
+    //End processing
+    CVPixelBufferUnlockBaseAddress( pixelBuffer, 0 );
 }
 
 - (NSString*)predictWithImage: (UIImage*)image;
